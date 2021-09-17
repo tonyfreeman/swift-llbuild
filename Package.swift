@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.1
 
 // This file defines Swift package manager support for llbuild. See:
 //  https://github.com/apple/swift-package-manager/tree/master/Documentation
@@ -189,7 +189,7 @@ let package = Package(
             path: "lib/llvm/Support",
             linkerSettings: [
                 .linkedLibrary("m", .when(platforms: [.linux])),
-                .linkedLibrary("ncurses", .when(platforms: [.linux, .macOS, .android]))]
+                .linkedLibrary("ncurses", .when(platforms: [.linux, .macOS]))]
         ),
     ],
     cxxLanguageStandard: .cxx14
